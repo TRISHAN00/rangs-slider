@@ -1,0 +1,117 @@
+.timeline-area {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  &__nav {
+    position: absolute;
+    bottom: -16px;
+    width: 100%;
+    height: 120px;
+    z-index: 99;
+  }
+
+  &__nav-item {
+    position: relative;
+  }
+
+  &__nav-item {
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 5px solid rgba(255, 255, 255, 0.28);
+      display: inline-block;
+    }
+  }
+  .tab_wrapper {
+    width: 110px !important;
+    text-align: center;
+    position: relative;
+    .single_tab_wrapper {
+      //display: inline-block;
+      text-align: center;
+      position: relative;
+      width: 60px !important;
+      margin: auto;
+      height: 60px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column !important;
+    }
+    .single_tab {
+      height: 15px;
+      width: 15px;
+      background-image: none !important;
+      background: #ddd;
+      border-radius: 50%;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      overflow: hidden;
+      margin: auto;
+      z-index: 9;
+      img {
+        //display: block;
+        min-height: 52px;
+        width: auto;
+        display: none;
+        transition: all 4s ease-in-out;
+      }
+    }
+    .single_text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      //bottom: -8px;
+      bottom: 5px;
+      font-size: 12px;
+      color: rgb(243, 239, 239);
+    }
+  }
+
+  .tab_wrapper:hover .single_tab {
+    height: 50px;
+    width: 50px;
+  }
+  .tab_wrapper:hover .single_tab img {
+    height: 50px;
+    width: 50px;
+    display: block;
+  }
+  .slick-slide.slick-current.slick-center .single_tab {
+    height: 50px !important;
+    width: 50px;
+  }
+  .slick-slide.slick-current.slick-center .single_tab img {
+    height: 50px;
+    width: 50px;
+    display: block;
+  }
+  &__horizontal {
+    position: relative;
+  }
+
+  &__horizontal:after {
+    position: absolute;
+    content: "";
+    background: #ddd;
+    height: 1px;
+    width: 100%;
+    bottom: 80px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.372);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    height: 120px;
+  }
+}
